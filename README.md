@@ -28,3 +28,15 @@ Active delivery agents join a [blockname](https://github.com/telehash/blockname)
 * get sealed copy and section of merkle tree to validate integrity
 * derive secret, return to agent
 * agent collects fee by broadcasting frozen tx w/ secret, always contains key to unseal
+
+## compute
+
+> wild west
+
+* select 1+ compute nodes from the DHT
+* negotiate escro'd microtx (penny bank) with all
+* share the "difference" of secrets w/ the nodes (each get others but not own)
+* nodes must all collaborate to "compute", carefully share secrets to get their own
+* program signals sync events w/ dynamic state, used to validate all nodes
+* all nodes must have all secrets and sign final tx
+* may only be triggered by blockchain events (getting funded?)
