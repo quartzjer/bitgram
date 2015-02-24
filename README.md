@@ -1,6 +1,17 @@
-# Bitgram - bitcoin native email, private and decentralized
+# Bitgram - bitcoin distributed compute
 
 > very rough draft, just brainstorming!
+
+* use blockname DHT to advertise compute service(s)
+* select 1+ providers
+* choose based on price, reputation, trust
+* upload a container
+  * during compute, containers require checkpoint sync
+* fund
+  * negotiate penny banks to fund a distributed compute
+  * accessor pays
+  * timelocked
+  * container has penny bank, pays for self
 
 Overall concept is to cache encrypted messages (blobs) to recipients based in their public key along with a transaction to a set of random delivery agents, and when the recipient picks up the message from any agent they return a secret so that the agent can claim the transaction and get paid for the service.
 
