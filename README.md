@@ -1,4 +1,4 @@
-# Bitgram - bitcoin distributed compute
+# Bitgram - bitcoin distributed infrastructure
 
 > very rough draft, just brainstorming!
 
@@ -14,6 +14,24 @@
   * container has penny bank, pays for self
 
 Overall concept is to cache encrypted messages (blobs) to recipients based in their public key along with a transaction to a set of random delivery agents, and when the recipient picks up the message from any agent they return a secret so that the agent can claim the transaction and get paid for the service.
+
+* chrono-gram - timelock based one-time
+  * requires 2+
+  * broadcast locked tx, includes input for someone else
+  * with correct input, will unlock output after running
+* pro-gram - container
+  * with only one, is == ec2 if trusted
+  * can be 2+ and pre-funded w/ mutual unlocks (trusted compute)
+  * can be on-demand (pb escrow keeps alive)
+* ram-gram - temporary caching
+  * no compute, expensive and key-value
+  * pb escrow
+* store-gram - file/byte storage
+  * s3 interface
+  * one-time unlock prepaid
+  * on-demand (pb)
+
+Uses `.gram` tld to advertise, on-demand is accessible via DHT (or direct)
 
 ## message delivery agent DHT
 
